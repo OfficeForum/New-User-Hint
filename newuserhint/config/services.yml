@@ -1,0 +1,9 @@
+services:
+    oxpus.newuserhint.listener:
+        class: oxpus\newuserhint\event\main_listener
+        arguments:
+            - @dbal.conn
+            - @template
+            - @user
+        tags:
+            - { name: event.listener }
